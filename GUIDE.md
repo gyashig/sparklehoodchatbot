@@ -16,7 +16,7 @@
 - Go to /etc/apache2/sites-enabled/000-default.conf
 - Add the following block after the `DocumentRoot /var/www/html` line
 
-`
+```
 WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi
 <Directory flaskapp>
@@ -25,7 +25,7 @@ WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi
     Order deny,allow
     Allow from all
 </Directory>
-`
+```
 
 - Restart the server by running `sudo service apache2 restart`
 
