@@ -59,3 +59,12 @@ location / {
 ```
 
 - run `sudo systemctl restart nginx`
+
+
+# For streamlit
+
+- run `streamlit run frontend.py`
+- To have it running after you exit the terminal, carry out the following steps:
+    - run  `sudo apt-get install tmux`
+    - run `tmux new -s StreamSession`
+    - then run `streamlit run frontend.py`
