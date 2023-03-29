@@ -1,12 +1,7 @@
-from dotenv import load_dotenv
-from random import choice
-from flask import Flask, request 
 import os
 import openai
 
-load_dotenv()
-#openai.api_key = os.getenv("OPENAI_API_KEY")
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_KEY")
 completion = openai.Completion()
 
 start_sequence = "\nSaraswati:"
@@ -25,7 +20,7 @@ def ask(question, chat_log=None):
     frequency_penalty=0,
     presence_penalty=0,
     stop=["\n"]
-)
+    )
     story = response['choices'][0]['text']
     return str(story)
 
