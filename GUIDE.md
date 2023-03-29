@@ -3,9 +3,10 @@
 
 [culled from here](https://medium.com/techfront/step-by-step-visual-guide-on-deploying-a-flask-application-on-aws-ec2-8e3e8b82c4f7)
 
-- Select the Ubuntu Server 16.04 LTS (HVM), SSD Volume Type — ami-43a15f3e instead of the Amazon Linux
+- Install gunicorn and add to your project requirements.
+- Select the Ubuntu Server.
 - Click on Review and Launch.
-- set http tcp 80 under security groups and ssh tcp 22 to access from anywhere
+- set http tcp 80 under security groups and ssh tcp 22 to access from anywhere and add custom tcp for streamlit
 - run `sudo apt-get update`
 - run `sudo apt-get install python3-venv`
 - clone project
