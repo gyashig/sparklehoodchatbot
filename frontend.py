@@ -2,7 +2,7 @@ import requests
 import streamlit as st
 st.title("Talent AI")
 
-BACKEND_URL = "http://127.0.0.1:5000"
+BACKEND_URL = "http://127.0.0.1:8000"
 
 input = st.text_area("Type in a message",key='text')
 
