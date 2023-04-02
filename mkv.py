@@ -1,7 +1,7 @@
 import os
 import openai
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_KEY")
 completion = openai.Completion()
 
 start_sequence = "\nSaraswati:"
